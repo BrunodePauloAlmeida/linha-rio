@@ -1,0 +1,24 @@
+[project]
+name = "linha-rio"
+version = "0.1.0"
+description = "A city-scale transit simulator for a Rio-like network: GTFS, journey planning, a full-day passenger simulation and a timetable optimizer."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "numpy>=1.26",
+    "uvicorn>=0.30",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["linha_rio"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
